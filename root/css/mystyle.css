@@ -1,0 +1,1354 @@
+/*Unit 3: Modified to include responsiveness*/
+
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+
+    /*Include padding and border in the every element's total width and height*/
+	* {
+        box-sizing: border-box;
+		/*border: solid black 1px;*/
+    }
+
+    /***********************************************/
+    /*****This section deals with html elements*****/
+    /***********************************************/
+
+    /*Give the body 80% of the screen width and shift it 10% to the right
+    to center it, The whole body gets font family of sans-serif or serif*/
+	body {
+		width: 80%;
+		margin-left: 10%;
+        font-family: sans-serif, serif;
+        background-color: #f0f0f0;
+    }
+
+    /*For each paragraph we give it a margin of 20px, and indent the first line
+    by 20px*/
+    p {
+		margin: 20px;
+        text-indent: 20px;
+        padding: 5px;
+    }
+    
+    /*For every anchor inside a paragraph we hide the text decoration*/
+    p a {
+		text-decoration: none;
+    }
+    
+    /*The nav element which holds the major navigation bar float to the right*/
+    nav {
+        float: left;
+        width: 100%;
+    }
+    
+    nav ul {
+        width: 85%;
+        float: left;
+    }
+
+    nav #carticon {
+        position: relative;
+        width: 15%;
+        height: auto;
+        float: right;
+    }
+
+    nav #carticon img, nav #carticon p {
+        width: 50%;
+        float: left;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    
+    /*For every anchor inside a van element we remove text decoration and give them
+    a white text color*/
+	nav a {
+		text-decoration: none;
+		color: white;
+    }
+
+    /*For every li element in ul element inside a div element that is a child of a 
+    nav element the font size is set to 0.9em*/
+	nav div ul li {
+        background-color: black;
+		font-size: .6em;
+    }
+    
+    /*For every img element the max width is 100%, height will be auto and proportionate
+    with the width. We give them rounded corners of 10px. Their background color is set 
+    to white. Also, we give a shadow going down and a margin from the top of 20px*/
+    img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 10px;
+		background-color: white;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		margin-top: 20px;
+	}
+
+    /*In input of type number will have a width of 15%, 5px padding and floats right*/
+    input[type=number] {
+		width: 15%;
+		padding: 5px;
+		float: right;
+	}
+
+    /*The table used for the cart*/
+    /*The table will have a solid black border of 1px. The width is 100% of the body.
+    Top and bottom margins will be 20px*/
+    table {
+		border: 1px solid black;
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+    
+    /*We give the table header a solid black border, padding of 5px, margin of 20px, 
+    and a green background color*/
+	th{
+		border: 2px solid black;
+		padding: 5px;
+		margin: 20px;
+		background-color: #4CAF50;
+		color: black;
+	}
+    
+    /*Each table data cell will have a solid black border of 1px, padding of 5px, and
+    a margin of 20px*/
+	td {
+		border: 1px solid black;
+		padding: 5px;
+		margin: 20px;
+    }
+    
+    /*Each span inside a table data cell is displayed inline block, has an orange
+    background color*/
+    td span {
+        display: inline-block;
+        background-color: #e49012;
+        width: 12%;
+        text-align: center;
+        border-radius: 1px;
+    }
+
+    /*Hovering over the span will give it a shadow a pointer cursor*/
+    td span:hover {
+        box-shadow: 0 0 2px 2px black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /*Clicking on the span will make the shadow disappear*/
+    td span:active {
+        box-shadow: 0 0 0 0;
+    }
+
+    /*Each paragraph inside the table data cell will be display as inline block*/
+    td p {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+    }
+    
+    /*Every table's even child (row) will get a different color than an odd row. Making the
+    table readable*/
+	tr:nth-child(even) {
+        background-color: #FFF3E0;
+    }
+    
+    /*The table footer data cells will have a bolder border than normal data cells*/
+	tfoot td {
+		border: 3px solid black;
+		padding: 5px;
+		margin: 20px;
+    }
+
+    /*The input types inside a form element will have a bottom margin of 20px */
+    form input[type=text], form input[type=email] {
+        height: 40px;
+    }
+    
+    /*The input types inside a form element will have a bottom margin of 20px */
+    form input {
+        margin-bottom: 20px;
+    }
+    
+    /*The input types of type submit and reset*/
+    form input[type=submit], form input[type=reset] {
+        padding: 10px;
+        width: 20%;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+
+
+    /*The footer element will be opx from the bottom, has a margin of 20px from the top, 
+    takes 100% width relative to the bosy element and the text color is black*/
+    footer {
+		position: relative;
+		bottom: 0;
+		margin-top: 20px;
+        width: 100%;
+        color: black;
+        background-image: linear-gradient(to bottom, #FFFFFF, #f8f4f2);
+    }
+    
+    /***************************************************/
+    /*****This section deals with the id attributes*****/
+    /***************************************************/
+    
+    /*********
+    * header *
+    *********/
+
+    /*On each page there is a header that has the company's logo, and title*/
+    #header {
+        text-align: center;
+        background-image: linear-gradient(to left, #f8f1ee, #f8f4f2);
+	}
+
+    /*The logo will have a width of 15% and floated left so that it is aligned with title*/
+    #logo {
+		position: relative;
+		width: 15%;
+		float: left;
+		padding-left: 0;
+    }
+    
+    /*This title is inside the header it contains the company's name and slogan. It will have 
+    a width of 85% so that it fits with the logo. It also floats left. We give it an italic look
+    and align the text to the left*/
+    #title {
+		position: relative;
+		width: 85%;
+		float: left;
+		font-style: italic;
+		text-align: left;
+    }
+
+    /*The company name will have no bottom margin*/
+    #companyName {
+		margin-bottom: 0;
+	}
+    
+    /*The company slogan will have no top margin. Making the name and slogan closer to each other*/
+	#companySlogan {
+		margin-top: 0;
+	}
+    
+    /*************
+    * navigation *
+    *************/
+
+    /*These is the main navigation links. The ul element we want it to 
+    have no style, and the position is relative to the element that contains it.*/
+    #navigation ul {
+		list-style: none;
+		position: relative;
+	}
+
+    /*This the drop down menu used in small screen devices. At this point we hide it
+    because we are dealing with big screen devices.*/
+	#dropdown span {
+		display: none;
+	}
+
+    /*Each li element inside the navigation bar will float to the left making the menu 
+    horizontal. And we give them margins and paddings.*/
+	#navigation li {
+		float: left;
+		padding: 5px;
+		margin-right: 1px;
+		margin-top: 1px;
+	}
+    
+    /*When we hover over a link we will change its color to a lighter color*/
+	#navigation li:hover {
+		background-color: #1119;
+    }
+
+    #menu {
+        display: initial;
+    }
+
+    /***********
+    * carticon *
+    ***********/
+
+    /*
+    * remove the shadow from the icon image, because the img element
+    * has a shadow.
+    */
+    #carticon img {
+        position: relative;
+        box-shadow: 0 0 0 0;
+        background-color: #f0f0f0;
+    }
+
+    /*
+    * When we hover over the cart icon it gets a shadow
+    */
+    #carticon img:hover {
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /*
+    * When the icon is clicked the shadow is gone
+    */
+    #carticon img:active {
+        box-shadow: 0 0 0 0;
+    }
+
+    #carttotalqty {
+        font-weight: bold;
+        color: green;
+    }
+
+    /*******
+    * main *
+    *******/
+
+    #main {
+        background-color: #f8f4f2;
+        padding: 10px;
+    }
+
+    /************
+    * indicator *
+    ************/
+
+    /*
+    * hide the indicator
+    */
+    #indicator {
+        display: none;
+    }
+
+    /*
+    * moves the indicator upwards and disapears
+    */
+    .indicatorup {
+        -ms-transform: translate(200px, -300px); /* IE 9 */
+        -webkit-transform: translate(200px, -300px); /* Safari 3-8 */
+        transform: translate(200px, -300px);
+        opacity: 0;
+    }
+
+    /**************
+    * suggestions *
+    **************/
+
+    #suggestions {
+        width: 100%;
+        height: auto;
+        -webkit-transition: width .3s;
+        transition: width 1s ease-in;
+    }
+
+    #suggestions h3 {
+        background-color: #4CAF50;
+        text-align: center;
+    }
+
+    #items {
+        display: flex;
+    }
+
+    #items a {
+        position: relative;
+        width: 50%;
+        float: left;
+        flex: 1;
+    }
+
+    #items a img {
+        margin: 0;
+    }
+    
+    /**************
+    * contactinfo *
+    **************/
+
+    /*Give the contact info which is in the footer section a width of 100% of the
+    body. And a solid black border*/
+    #contactinfo {
+		border-top: solid black 1px;
+		width: 100%;
+	}
+    
+    /*The ul element inside the contactinfo will have no style and no top margin*/
+	#contactinfo ul {
+		list-style: none;
+		margin-top: 0;
+	}
+    
+    /*Display the li element of a ul element inside the contactinfo as inline*/
+	#contactinfo ul li {
+		display: inline;
+	}
+    
+    /*The images inside the contactinfo will have a width, and height of 10% and 
+    seperated by 10%*/
+	#contactinfo ul li a img {
+		width: 10%;
+		height: 10%;
+		margin-left: 10%;
+    }
+
+    /*********
+    * mycart *
+    *********/
+
+    /*Posiction of the shoping cart is relative to the element containing it with a
+    width of 100%*/
+    #mycart {
+		position: relative;
+		width: 100%;
+    }
+
+    /***************
+    * checkoutform *
+    ***************/
+
+    #checkoutform #name, #checkoutform #contactinformation, #checkoutform #shippingaddress {
+        border: solid lightgray 1px;
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    #checkoutform div label, #checkoutform div label select {
+        margin: 10px;
+        padding: 5px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #checkoutform div p {
+        position: relative;
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 0;
+        padding-top: 0;
+        left: -25px;
+        font-weight: bold;
+    }
+
+    /*The controls contains the checkout and clear cart buttons. We give it 50% of the
+    containing element and shift it right.*/
+    #controls {
+		width: 50%;
+		position: relative;
+        left: 50%;
+    }
+
+    /*The checkout button has a dark orange color*/
+	#checkout {
+		background-color: #e49012;
+    }
+    
+    /*The clear cart button and cancel checkout has a light orange color*/
+	#clear, #cancel {
+		background-color: #eba640;
+	}
+    
+    /*Common attributes for clear, cancel and checkoput buttons*/
+	#clear, #checkout, #cancel {
+        position: relative;
+        width: 100%;
+        padding: 1px;
+		margin: 10px;
+		display: block;
+		border-radius: 2px;
+		font-weight: bold;
+		box-shadow: 0 0 5px 2px #2f3036;
+		text-align: center;
+    }
+
+    /*Change the curser to a pointer when hovered over*/
+	#clear:hover, #checkout:hover, #cancel:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px 2px #0026ff;
+    }
+
+    /*Remove the shadow when clicked on*/
+	#clear:active, #checkout:active {
+        box-shadow: 0 0 0 0;
+        cursor: pointer;
+    }
+
+    #cancel:active {
+        box-shadow: 0 0 0 0;
+        cursor: pointer;
+    }
+
+    #checkout input {
+        width: 100%;
+        background-color: #e49012;
+        border-style: none;
+        padding: 1px;
+        margin: 10px;
+        margin-left: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #cancel input {
+        width: 100%;
+        background-color: #eba640;
+        border-style: none;
+        padding: 1px;
+        margin: 10px;
+        margin-left: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #checkout input:hover, #cancelcheckout:hover {
+        cursor: pointer;
+    }
+
+    #checkout input:active, #cancelcheckout:active {
+        border-style: none;
+        box-shadow: 0 0 0 0;
+    }
+
+    /**************
+    * contactform *
+    **************/
+
+    /*Give the contact form an orange background and some padding and margin*/
+    #contactform {
+        box-shadow: 0 0 5px 2px #2f3036;
+        background-image: linear-gradient(to right, #38fdb2, #09a76a);
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    /************
+    * copyright *
+    ************/
+
+    /*The copy right is displayed a sblock given a 100% width and the text aligned 
+    to the right*/
+    #copyright {
+		display: block;
+		width: 100%;
+		text-align: right;
+    }
+
+    /******************************************************/
+    /*****This section deals with the class attributes*****/
+    /******************************************************/
+
+    /******************
+    * currentpagemenu *
+    ******************/
+
+    /*The current page that user is on the background color of the navigation link
+    will be changed to light gray*/
+    .currentpagemenu {
+		background-color: #1119;
+    }
+    
+    /******
+    * add *
+    ******/
+
+    /*This is the add to cart button*/
+    .add {
+        text-align: center;
+		font-weight: bold;
+		width: 80%;
+		position: relative;
+		left: 10%;
+		margin: 5px;
+		padding: 5px;
+		border-radius: 2px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(to right, rgb(252, 164, 96), #FF6F00);
+	}
+
+    /*When it is clicked we remove the shadow making an effect of a clicked button*/
+	.add:active {
+		box-shadow: 0 0 0 0;
+    }
+    
+    /**********
+    * sideimg *
+    ***********
+
+    /*These images are used on the side of other elements on a page. Given a width of 30%*/
+    .sideimg {
+		width: 30%;
+    }
+    
+    /**************
+    * description *
+    **************/
+
+    /*These are the paragraphs put on the side of a sideimg. Given a width of 70%*/
+    .description {
+		width: 70%;
+    }
+
+    /***********
+    * showcart *
+    ***********/
+
+    /*
+    * An absolute position and a z-index of 12 for the drop down cart will not push the 
+    * elements below it down.
+    */
+    .showcart {
+        position: absolute;
+        z-index: 1;
+        left: -150px;
+        top: 110px;
+        background-image: linear-gradient(to right, #fafafa, #f1f1f1);
+        width: 400px;
+        transition: height 1s;
+        box-shadow: 0 5px 20px 0 #888888;
+        transition: 1s;
+        border-width: 5px;
+    }
+
+    /*
+    * each div represents a row in the drop down cart
+    */
+    .showcart div {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 5px;
+        display: flex;
+    }
+
+    /*
+    * each div has 4 spans representing the item, price, qty and total.
+    */
+    .showcart div span {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 5px;
+        left: 0;
+        flex: 1;
+        text-align: right;
+    }
+
+    /*
+    * each first span in each div in the drop down cart
+    */
+    .showcart div span:nth-of-type(1) {
+        text-align: left;
+        font-weight: bold;
+        flex: 2;
+    }
+
+    /*
+    * the first div in the drop down cart. represents the cart header
+    */
+    .showcart div:nth-of-type(1) {
+        font-weight: bold;
+        text-align: center;
+        border: solid black 1px;
+        margin-top: 0;
+    }
+
+    /*
+    * the last div in the drop down cart represents the totals
+    */
+    .showcart div:nth-last-of-type(1) span {
+        flex: 2;
+        font-weight: normal;
+        text-align: right;
+        border: solid black 1px;
+        margin-bottom: 0;
+    }
+
+    /*
+    * the first span in the last div in the drop down cart
+    */
+    .showcart div:nth-last-of-type(1) span:nth-of-type(1):before {
+        float: left;
+        font-weight: bold;
+        content: "Total Qty";
+    }
+
+    /*
+    * the second span in the last div in the drop down cart
+    */
+    .showcart div:nth-last-of-type(1) span:nth-of-type(2):before {
+        float: left;
+        font-weight: bold;
+        content: "Total Price";
+    }
+
+    
+    /**********
+    * pointer *
+    **********/
+
+    /*Give the cursor a pointer look*/
+    .pointer {
+		cursor: pointer;
+    }
+    
+    /***********
+    * clearfix *
+    ***********/
+
+    /*This helps to clear after the elements in case elements are
+    being floated*/
+    .clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+    }
+    
+    /***********
+    * removeMe *
+    ***********/
+
+    .removeMe0, .removeMe1,.removeMe2 {
+        background-color: red;
+    }
+    
+    .removeMe0:hover, .removeMe1:hover,.removeMe2:hover {
+        font-weight: bold;
+        box-shadow: 0 0 5px 1px black;
+    }
+
+    .removeMe0:active, .removeMe1:active,.removeMe2:active {
+        box-shadow: 0 0 0 0;
+    }
+
+    /***************
+    * orderdetails *
+    ***************/
+
+    .orderdetails {
+        display: flex;
+    }
+
+    .orderdetails label {
+        flex: 1;
+    }
+
+    /*************************
+    * other helpfull classes *
+    *************************/
+
+    .lightgrayborder {
+        border: solid lightgray 1px;
+        box-shadow: 0 0 8px 2px black;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .black {
+        color: black;
+    }
+
+	.nomargin {
+		margin: 0;
+	}
+		
+	.noindent {
+		text-indent: 0;
+	}
+	
+	.left {
+		float: left;
+	}
+	
+	.right {
+		float: right;
+	}
+	
+	.bold {
+		font-weight: bold;
+	}
+	
+	.center {
+		text-align: center;
+	}
+	
+	.round {
+		border-radius:10px;
+    }
+
+    .centerpos {
+        position: relative;
+        left: 25%;
+    }
+    
+}
+
+    /* For handheld: */
+    @media only screen and (max-width: 767px) {
+
+        /*Display all element as block*/
+        * {
+            display: block;
+            /*border: solid black 1px;*/
+        }
+
+        /*Hide the style on mobile divices*/
+        style {
+            display: none;
+        }
+    
+        /***********************************************/
+        /*****This section deals with html elements*****/
+        /***********************************************/
+
+        /*Hide the title*/
+        title {
+            display: none;
+        }
+
+        /*Give padding and margin to the body and move it inwards*/    
+        body {
+            margin: 10px;
+            padding: 10px;
+            background-color: #EEEEEE;
+            z-index: -1;
+        }
+
+        /*Make the paragraph text a bit bigger than normal*/
+        p {
+            font-size: 1.1em;
+        }
+
+        /*We want the span to saty displayed as inline*/
+        span {
+            display: inline;
+        }
+
+        /*The ul element inside a div that is a child of a nav element is given
+        a normal text size, absolute position to move it left*/
+        nav div ul {
+            font-size: 1em;
+            position: absolute;
+            margin-top: 0;
+            left: 0;
+            width: 100%;
+            padding-left: 20px;
+            width: 85%;
+            margin-top: 0;
+        }
+    
+        nav #carticon {
+            position: relative;
+            width: 15%;
+            height: auto;
+            float: right;
+        }
+    
+        nav #carticon img, nav #carticon p {
+            width: 50%;
+            float: left;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        /*Change the table look. No borders, full width and a bottom margin of 30px*/
+        table {
+            border: none;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        /*Hide the table header because we are going to display rows as block*/
+        th {
+            display: none;
+        }
+        
+        /*For every data cell give it a solid black border and shift it left by 50%*/
+        td {
+            border-bottom: solid black 1px;
+            padding-left: 50%;
+        }
+    
+        /*For every data cell make the content before the data the shifted 5px from the left*/
+        td:before {
+            position: absolute;
+            left: 5px;
+        }
+
+        /*Each span inside a table data cell is displayed inline block, has an orange
+        background color*/
+        td span {
+            display: inline-block;
+            background-color: #e49012;
+            width: 12%;
+            text-align: center;
+            border-radius: 1px;
+        }
+
+        /*Hovering over the span will give it a shadow a pointer cursor*/
+        td span:hover {
+            box-shadow: 0 0 2px 2px black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /*Clicking on the span will make the shadow disappear*/
+        td span:active {
+            box-shadow: 0 0 0 0;
+        }
+
+        /*Each paragraph inside the table data cell will be display as inline block*/
+        td p {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+        }
+        
+        /*For every table row give it a 5px bottom margin and a solid blcak border of 2px*/
+        tr {
+            margin-bottom: 5px;
+            border: solid black 2px;
+        }
+
+        /*For every even row give it a distinct color for readability*/        
+        tr:nth-child(even) {
+            background-color: #FFF3E0;
+        }
+    
+        /*For every footer row give it a dark orange color*/
+        tfoot tr {
+            background-color: #E65100;
+        }
+
+        /*Insert content before each row data cell. This content is what replaces 
+        the table header that we removed*/
+        tbody td:nth-of-type(1):before {
+            content: "Item Name: ";
+        }
+    
+        tbody td:nth-of-type(2):before {
+            content: "Price: ";
+        }
+    
+        tbody td:nth-of-type(3):before {
+            content: "Qty: ";
+        }
+    
+        tbody td:nth-of-type(4):before {
+            content: "Total: ";
+        }
+
+        tfoot td:nth-of-type(1):before {
+            content: "Total Qty: ";
+        }
+    
+        tfoot td:nth-of-type(2):before {
+            content: "Total Price: ";
+        }
+
+        /*make the inserted content on each row bold*/
+        tbody td:nth-of-type(n):before, tfoot td:nth-of-type(n):before {
+            font-weight: bold;
+        }
+    
+        footer {
+            background-color: #78909C;
+        }
+
+        /*The input types of type submit and reset*/
+        form input[type=submit], form input[type=reset] {
+            display: inline-block;
+            padding: 10px;
+            width: 30%;
+            font-weight: bold;
+            margin-right: 20px;
+
+        }
+
+        /***************************************************/
+        /*****This section deals with the id attributes*****/
+        /***************************************************/
+    
+        /*******
+        * logo *
+        *******/
+
+        /*The logo will have a width of 15% and floated left so that it is aligned with title*/
+        #logo {
+            position: relative;
+            width: 15%;
+            float: left;
+            padding-left: 0;
+        }
+
+        /********
+        * title *
+        ********/
+        
+        /*This title is inside the header it contains the company's name and slogan. It will have 
+        a width of 85% so that it fits with the logo. We give it an italic look
+        and align the text to the right*/
+        #title {
+            position: relative;
+            width: 85%;
+            font-style: italic;
+            text-align: right;
+        }
+    
+        /***********
+        * dropdown *
+        ***********/
+
+        #dropdown {
+            width: 75%;
+        }
+    
+        /*Remove decoration from the anchor element in the dropdown menu*/
+        #dropdown div {
+            text-decoration: none;
+            color: #fff;
+        }
+    
+        /*When we hover over the drop down menu and the menu. The menu is brought forward*/
+        #dropdown:hover #menu{
+            font-size: 1em;
+            display: block;
+            position: absolute;
+            color: #fff;
+            min-width: 140px;
+            z-index: 1;  
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-decoration: none;
+            border-top: solid white 1px;
+            width: 50%;
+            padding-left: 20px;
+        }
+        
+        /*When we hover over the drop down menu and the items in the menu*/
+        #dropdown:hover #menu li {
+            font-size: 1em;
+            margin-left: 0;
+            text-decoration: none;
+            color: #fff;
+            background-color: #2f3036;
+            margin-left: 0;
+            border-bottom: solid white 1px;
+        }
+    
+        /*Keep the anchors with no decoration after hovering over them*/
+        #dropdown:hover #menu a {
+            text-decoration: none;
+            color: #fff;
+            background: #2f3036;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        /***********
+        * carticon *
+        ***********/
+
+        #carticon {
+            width: 15%;
+        }
+
+        #carticon img {
+            width: 85%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #carticon p {
+            width: 15%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*******
+        * main *
+        *******/
+
+        /*Give main a background color*/
+        #main {
+            background-color: #EFEBE9;
+        }
+
+        /*All images in the main part are given a width of 100%*/
+        #main img {
+            width: 100%;
+        }
+
+        /*********
+        * mycart *
+        *********/
+        
+        /*Give the cart a max width*/
+        #mycart {
+            position: relative;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /***************
+        * checkoutform *
+        ***************/
+
+        #checkoutform div {
+            border: solid lightgray 1px;
+        }
+
+        /*The controls contains the checkout and clear cart buttons. We give it 100% of the
+        containing element*/
+        #controls {
+            width: 100%;
+            position: relative;
+        }
+        
+        /*The checkout button has a dark orange color*/
+	    #checkout {
+            width: 100%;
+		    background-color: #e49012;
+        }
+    
+        /*The clear cart button and cancel checkout has a light orange color*/
+	    #clear, #cancel {
+            width: 100%;
+		    background-color: #eba640;
+	    }
+    
+        /*Common attributes for both clear and checkout buttons*/
+        #clear, #checkout, #cancel {
+            position: relative;
+            display: block;
+            border-radius: 2px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 0 5px 2px #2f3036;
+        }
+
+        /*Remove the shadow when clicked on*/
+	    #clear:active, #checkout:active, #cancel:active {
+            box-shadow: 0 0 0 0;
+        }
+    
+        /*Give the text inside the clear and checkout button normal text size*/
+        #controls div p {
+            font-size: 1em;
+        }
+
+        #checkout input {
+            width: 100%;
+            background-color: #e49012;
+            border-style: none;
+            padding: 1px;
+            margin: 10px;
+            margin-left: 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    
+        #cancel input {
+            width: 100%;
+            background-color: #eba640;
+            border-style: none;
+            padding: 1px;
+            margin: 10px;
+            margin-left: 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    
+        #checkout input:hover, #cancelcheckout:hover {
+            cursor: pointer;
+        }
+    
+        #checkout input:active, #cancelcheckout:active {
+            border-style: none;
+            box-shadow: 0 0 0 0;
+        }
+        
+        /**************
+        * contactinfo *
+        **************/
+
+        /*Display the section as block with full width and give it a top border*/    
+        #contactinfo {
+            display: block;
+            width: 100%;
+            border-top: solid lightgray 1px;
+            background-color: #A1887F;
+        }
+    
+        /*Each li element in the contact info if floated left and given a width of 25%*/
+        #contactinfo ul li {
+            position: relative;
+            float: left;
+            width: 25%;
+        }
+    
+        /*The images in the contact info section are given same width and height*/
+        #contactinfo ul li img{
+            width: 40%;
+            height: 40%;
+        }
+    
+        /**************
+        * contactform *
+        **************/
+
+        /*Give the contact form an orange background and some padding and margin*/
+        #contactform {
+            background-color: #e49012;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /************
+        * copyright *
+        ************/
+
+        /*Float the copyright to the right and align the text right*/
+        #copyright {
+            position: relative;
+            padding: 5px;
+            float: right;
+            text-align: right;
+        }
+
+        /************
+    * indicator *
+    ************/
+
+    /*
+    * hide the indicator
+    */
+    #indicator {
+        display: none;
+    }
+
+    /*
+    * moves the indicator upwards and disapears
+    */
+    .indicatorup {
+        -ms-transform: translate(200px, -300px); /* IE 9 */
+        -webkit-transform: translate(200px, -300px); /* Safari 3-8 */
+        transform: translate(200px, -300px);
+        opacity: 0;
+    }
+
+    /**************
+    * suggestions *
+    **************/
+
+    #suggestions {
+        width: 100%;
+        height: auto;
+        -webkit-transition: width .3s;
+        transition: width 1s ease-in;
+    }
+
+    #suggestions h3 {
+        background-color: #4CAF50;
+        text-align: center;
+    }
+
+    #items {
+        display: flex;
+    }
+
+    #items a {
+        position: relative;
+        width: 50%;
+        float: left;
+        flex: 1;
+    }
+
+    #items a img {
+        margin: 0;
+    }
+    
+        /******************************************************/
+        /*****This section deals with the class attributes*****/
+        /******************************************************/
+
+        /************************
+        * bars - added in unit 4*
+        ************************/
+
+        /*Give the 3 bars representing the menu a sandwich look*/
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #FF6F00;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /*Rotate the first bar 45 degrees clockwise*/
+        .change1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        /*Hide the second bar*/
+        .change2 {
+            opacity: 0;
+        }
+
+        /*Rotate the third bar 45 degrees counterclockwise*/
+        .change3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        /******
+        * add *
+        ******/
+
+        /*This is the add to cart button*/
+        .add {
+            background-color: #FF6F00;
+            text-align: center;
+            font-weight: bold;
+            width: 50%;
+            position: relative;
+            left: 25%;
+            margin: 5px;
+            padding: 1px;
+            border-radius: 2px;
+            box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        /*When it is clicked we remove the shadow making an effect of a clicked button*/
+        .add:active {
+            box-shadow: 0 0 0 0;
+        }
+
+        /***********
+        * removeMe *
+        ***********/
+        
+        .removeMe0, .removeMe1, .removeMe2 {
+            background-color: red;
+        }
+
+        .removeMe0:active, .removeMe1:hover,.removeMe2:hover {
+            font-weight: bold;
+        }
+
+        .centerpos {
+            position: relative;
+            left: 25%;
+        }
+    }

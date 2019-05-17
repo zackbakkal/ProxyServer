@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="shortcut icon" href="pics/kbreelogo.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+	<script src="javascript/dist/jquery/jquery-3.4.0.js"></script>
+	<script src="javascript/dist/jquery/menu/currentpagemenu.js"></script>
+	<script src="javascript/dist/menu/sandwichbars.js"></script>
+	<script src="javascript/dist/jquery/mycart/product.js"></script>
+	<script src="javascript/dist/jquery/mycart/row.js"></script>
+	<script src="javascript/dist/jquery/mycart/cart.js"></script>
+	<script src="javascript/dist/shoppingcart/dropdowncart/dropdowncart.js"></script>
+	<title>K-Bree Cosmetics</title>
+</head>
+
+<body>
+	<header id="header" class="clearfix">
+		<div id="logo">
+			<img src="pics/kbreelogo.jpg" alt="K-Bree's logo, Argan tree" width="70" height="90" />
+		</div>
+
+		<div id="title">
+			<h1 id="companyName">K-Bree Cosmetics</h1>
+			<h3 id="companySlogan">Let Yourself Shine</h3>
+		</div>
+	</header>
+
+	<div id="navigation" class="clearfix">
+		<nav>
+			<div id="carticon" class="clearfix">
+				<div class="clearfix">
+					<a id="carticonimg" href="Cart.html"><img src="pics/cart.png" alt="Shopping Cart Icon" /></a>
+					<p id="carttotalqty">
+						<script>
+							if (localStorage.getItem("mycart") == null) {
+								document.getElementById("carttotalqty").innerHTML = 0;
+							} else {
+								document.getElementById("carttotalqty").innerHTML =
+									localStorage.getItem("carttotalqty");
+							}
+						</script>
+					</p>
+				</div>
+				<div id="cart" class="showcart clearfix"></div>
+			</div>
+			<div id="dropdown">
+				<div id="sandwichbars">
+					<div id="bar1"></div>
+					<div id="bar2"></div>
+					<div id="bar3"></div>
+				</div>
+
+				<ul id="menu">
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="Arganoil.html">ARGAN OIL</a></li>
+					<li><a href="Exfoliatingsoap.html">EXFOLIATING SOAP</a></li>
+					<li><a href="Lavaclay.html">LAVA CLAY</a></li>
+					<li><a href="Aboutus.html">ABOUT US</a></li>
+					<li><a href="Contactus.html">CONTACT US</a></li>
+					<li><a href="Cart.html">MY CART</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<div id="main">
+		<header class="clearfix">
+			<h1>Why did we chooseArgan oil</h1>
+			<div class="left description">
+				<p>Referred to as "Liquid Gold" by Moroccans themselves. This oil is a plant oil extract from the
+					Argania
+					spinosa tree, a tree that is endemic in Morocco. It is constantly extracted and used because of its
+					cosmetic
+					and nutritive value. It also claims to have a lot of medicinal properties.
+					This amazing oil contains some major vitamins and minerals essential for one’s health. It is known
+					to have
+					Vitamin C and E which are great antioxidants for the body thus it can counteract the effects of
+					aging.
+					The oil contains rare plant sterols (schottenol and spinasterol), not found in other oils. It is
+					believed
+					that these phytosterols are unique in their combination and that there are no other oils with a
+					comparable
+					phytosterol composition.</p>
+				<p>Argan is considered an effective anti-aging oil due to properties such as the high levels of vitamin
+					E/tocopherols
+					(anti-oxidants help neutralize free radical damage, which is important for skin exposed to polluted
+					Western environments)
+					and saponins (skin-softening agents). Besides cooling and soothing inflammation, it is also reputed
+					to help reduce wrinkles
+					by restoring the skin`s hydro-lipid layer.
+					Apply to any area of the body to relieve dryness, itchiness, inflammation or any other skin, hair or
+					nail ailment.
+				</p>
+			</div>
+			<div class="right round sideimg">
+				<img src="pics/arganfruit.jpg" alt="Argan fruit" />
+				<div class="center">
+					<p>Argan fruit</p>
+				</div>
+			</div>
+		</header>
+
+		<section class="clearfix">
+			<header>
+				<h2>Bridget Mclean</h2>
+			</header>
+			<div class="right description">
+				<p>Owner of K-Bree, Bridget Mclean was born and raised in Alberta, Canada. During her first visit to
+					Morocco,
+					Bridget was introduced to Argan oil while traveling to the south of Morocco, where Argania spinosa
+					trees grow abundantly.
+					After falling in love with this all natural oil and returning home with a small supply which she
+					herself help hand press
+					with other local woman, Bridget's supply starting to become low. After searching endlessly for a
+					quality affordable
+					Argan oil, disappointment set in. There was nothing comparable to what she had brought back from
+					Morocco and anything
+					somewhat close was outrageously expensive. While complaining to her husband Zakaria about this
+					problem, Zakaria and
+					Bridget decided to find a way to provide others with this amazing oil at reasonable prices and
+					K-Bree was born.
+					Currently in Calgary, Alberta Bridget is receiving the imports of K-Bree's products and preparing it
+					for distribution to you.
+				</p>
+			</div>
+			<div class="left round sideimg">
+				<img src="pics/bridgetmclean.jpg" alt="Bridget McLean" />
+				<div class="center">
+					<p>Bridget McLean</p>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="clearfix">
+			<header>
+				<h2>Zakaria Bakkal</h2>
+			</header>
+			<div class="right description">
+				<p>Co-Owner of K-Bree, he was born and raised in Casablanca, Morocco. Zakaria Bakkal grew up
+					experiencing the benefits
+					first hand of using both the cosmetic and edible Argan oil. When realizing how limited the options
+					were for purchasing
+					100 percent Pure Moroccan Argan oil outside of Morocco and knowing the amazing results obtained from
+					using this natural
+					resource. He teamed up with Bridget his wife and together they decided to offer this incredible
+					natural product to you,
+					in its purest form and at affordable prices! Currently in Morocco Zakaria is working hard to ensure
+					the best supply of
+					the fruit is readily available for K-Bree to produce. He over sees every step of the processing of
+					our oil, from the
+					harvesting of the fruit, to the filtering of the oil and securing the shipment to Canada.
+				</p>
+			</div>
+			<div class="left round sideimg">
+				<img src="pics/zakariabakkal.jpg" alt="Zakaria Bakkal" />
+				<div class="center">
+					<p>Zakaria Bakkal</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="clearfix">
+				<h3>how do we get our oil</h3>
+				<p>Since the idea began, Zakaria and Bridget have travelled to many locations across Southern Morocco.
+					Visiting the farms
+					learning and experiencing first hand the entire process in producing the oil. By educating ourselves
+					on the various problems
+					associated with the sourcing of our seeds through local woman co-ops we eventually decided against
+					purchasing through them,
+					as the underlying situation within the co-ops, goes against what we stand for, as a socialy
+					responsible company.
+					This decision was best suited for our company and the values we stand by.
+					At K-BREE we use the cold press method for producing our oil.
+				</p>
+			</div>
+		</section>
+
+	</div>
+
+	<footer class="clearfix">
+		<div id="contactinfo">
+			<ul>
+				<li><a href="mailto:zackbakkal@gmail.com"><img src="pics/email.png"
+							alt="email logo, from http://www.iconfinder.com"></a></li>
+				<li><a href="http://www.facebook.com/kbree.argan"><img src="pics/facebook.png"
+							alt="facebook logo, from https://www.freepik.com/"></a></li>
+				<li><a href="http://www.twitter.com/kbreeargan"><img src="pics/twitter.png"
+							alt="twitter logo, from https://www.freepik.com/"></a></li>
+				<li><a href="https://www.pinterest.ca/kbreecosmetics/"><img src="pics/pinterest.png"
+							alt="pinterest logo, from https://www.freepik.com/"></a></li>
+			</ul>
+		</div>
+		<div id="copyright">
+			<h6>&copy; 2018 by Zakaria Bakkal.</h6>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

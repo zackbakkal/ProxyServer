@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" href="pics/kbreelogo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+    <script src="javascript/dist/jquery/jquery-3.4.0.js"></script>
+    <script src="javascript/dist/jquery/menu/currentpagemenu.js"></script>
+    <script src="javascript/dist/menu/sandwichbars.js"></script>
+    <script src="javascript/dist/jquery/mycart/product.js"></script>
+    <script src="javascript/dist/jquery/mycart/row.js"></script>
+    <script src="javascript/dist/jquery/mycart/cart.js"></script>
+    <script src="javascript/dist/shoppingcart/dropdowncart/dropdowncart.js"></script>
+    <script
+        src="https://www.paypal.com/sdk/js?currency=CAD&client-id=AX7sb5iIJq4qiIyOtJZGG2wBd_POcg3hOyfE_q1-hbabQf8bydo5YoABl3Qshhwh-uUWn00QT8S35ERa"></script>
+    <script src="javascript/dist/jquery/checkout/checkout.js"></script>
+
+    <title>K-Bree Cosmetics - Check Out</title>
+</head>
+
+<body>
+
+    <header id="header" class="clearfix">
+        <div id="logo">
+            <img src="pics/kbreelogo.jpg" alt="K-Bree's logo, Argan tree" width="70" height="90" />
+        </div>
+
+        <div id="title" class="clearfix">
+            <h1 id="companyName">K-Bree Cosmetics</h1>
+            <h3 id="companySlogan">Let Yourself Shine</h3>
+        </div>
+    </header>
+
+    <div id="navigation" class="clearfix">
+        <nav>
+            <div id="carticon" class="clearfix">
+                <div class="clearfix">
+                    <a id="carticonimg" href="Cart.html"><img src="pics/cart.png" alt="Shopping Cart Icon" /></a>
+                    <p id="carttotalqty">
+                        <script>
+                            if (localStorage.getItem("mycart") == null) {
+                                document.getElementById("carttotalqty").innerHTML = 0;
+                            } else {
+                                document.getElementById("carttotalqty").innerHTML =
+                                    localStorage.getItem("carttotalqty");
+                            }
+                        </script>
+                    </p>
+                </div>
+                <div id="cart" class="showcart clearfix"></div>
+            </div>
+
+            <div id="dropdown">
+                <div id="sandwichbars">
+                    <div id="bar1"></div>
+                    <div id="bar2"></div>
+                    <div id="bar3"></div>
+                </div>
+
+                <ul id="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="Arganoil.html">ARGAN OIL</a></li>
+                    <li><a href="Exfoliatingsoap.html">EXFOLIATING SOAP</a></li>
+                    <li><a href="Lavaclay.html">LAVA CLAY</a></li>
+                    <li><a href="Aboutus.html">ABOUT US</a></li>
+                    <li><a href="Contactus.html">CONTACT US</a></li>
+                    <li><a href="Cart.html">MY CART</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="main">
+        <h2>Check out</h2>
+        <!-- check out form -->
+        <form id="checkoutform">
+            <div id="name">
+                <p>Name</p><br>
+                <label>First<br>
+                    <input id="first" type="text" name="given_name" max="140" tabindex="1" autofocus required><br>
+                </label>
+                <label>Last<br>
+                    <input id="last" type="text" name="surname" max="140" required tabindex="2" required><br>
+                </label>
+            </div>
+            <div id="contactinformation">
+                <label>Email<br>
+                    <input id="email" type="email" name="email" required tabindex="3"><br>
+                </label>
+            </div>
+            <div id="shippingaddress">
+                <p>Shipping address</p><br>
+                <div>
+                    <div id="streetaptzip">
+                        <label>Street address<br>
+                            <input id="line1" type="text" max="300" tabindex="4"><br>
+                        </label>
+                        <label>Apt., ste., bldg.<br>
+                            <input id="line2" type="text" max="120" tabindex="5"><br>
+                        </label>
+                        <label>Zip code<br>
+                            <input id="zip" type="text" tabindex="6"><br>
+                        </label>
+                    </div>
+                    <div id="countryprovincecity">
+                        <label>country
+                            <select id="country" tabindex="7" required>
+                                <option>Select One pls</option>
+                            </select>
+                        </label><br>
+                        <label>Province/State
+                            <select id="province" tabindex="8">
+                            </select>
+                        </label><br>
+                        <label>City
+                            <select id="city" tabindex="9">
+                            </select>
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls" class="clearfix">
+                <div id="checkout" class="clearfix" tabindex="12">
+                    <input type="submit" value="Continue" id="continue">
+                </div>
+                <div id="cancel" class="clearfix" tabindex="13">
+                    <input type="reset" value="Cancel" id="cancelcheckout">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer class="clearfix">
+        <div id="contactinfo">
+            <ul>
+                <li><a href="mailto:zackbakkal@gmail.com"><img src="pics/email.png"
+                            alt="email logo, from http://www.iconfinder.com"></a></li>
+                <li><a href="http://www.facebook.com/kbree.argan"><img src="pics/facebook.png"
+                            alt="facebook logo, from https://www.freepik.com/"></a></li>
+                <li><a href="http://www.twitter.com/kbreeargan"><img src="pics/twitter.png"
+                            alt="twitter logo, from https://www.freepik.com/"></a></li>
+                <li><a href="https://www.pinterest.ca/kbreecosmetics/"><img src="pics/pinterest.png"
+                            alt="pinterest logo, from https://www.freepik.com/"></a></li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <h6>&copy; 2018 by Zakaria Bakkal.</h6>
+        </div>
+    </footer>
+</body>
+
+</html>

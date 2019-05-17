@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Argan Oil",
+        "description": "30 ml Acrylic airless pump bottle",
+        "SKU": "12345",
+        "category": "PHYSICAL_GOODS"
+    },
+    {
+        "name": "Exfoliating Soap",
+        "description": "250 g jar",
+        "SKU": "12645",
+        "category": "PHYSICAL_GOODS"
+    },
+    {
+        "name": "Lava Clay",
+        "description": "250 g jar",
+        "SKU": "98345",
+        "category": "PHYSICAL_GOODS"
+    }
+]

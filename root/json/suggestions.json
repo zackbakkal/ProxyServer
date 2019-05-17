@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Argan Oil",
+        "src": "pics/arganoil.jpg",
+        "alt": "Argan oil 30 ml bottle",
+        "href": "Arganoil.html"
+    },
+    {
+        "name": "Exfoliating Soap",
+        "src": "pics/exfoliatingsoap.jpg",
+        "alt": "Exfoliating soap 250 g jar",
+        "href": "Exfoliatingsoap.html"
+    },
+    {
+        "name": "Lava Clay",
+        "src": "pics/lavaclay.jpg",
+        "alt": "Lava clay 250 g jar",
+        "href": "Lavaclay.html"
+    }
+]
